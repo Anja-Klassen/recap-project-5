@@ -13,6 +13,20 @@ const nextConfig = {
 
     return config;
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "example-apis.vercel.app",
+      },
+    ],
+  },
 };
 
 module.exports = nextConfig;
+
+// module.exports = {
+//   images: {
+//     domains: ["example-apis.vercel.app"],
+//   },
+// };
