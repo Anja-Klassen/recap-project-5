@@ -15,5 +15,3 @@ export default function SpotlightPage({ pieces }) {
     </StyledDiv>
   );
 }
-
-console.log("test:", Spotlight);
