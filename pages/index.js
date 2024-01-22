@@ -1,4 +1,4 @@
-import Spotlight from "@/components/Spotlight";
+import Spotlight from "@/components/Sportlight";
 import ArtPieces from "@/components/ArtPieces";
 import useSWR from "swr";
 import { StyledDiv } from "@/styles";
