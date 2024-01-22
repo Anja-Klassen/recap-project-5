@@ -1,7 +1,6 @@
 import GlobalStyle from "../styles";
 import useSWR from "swr";
 import { StyledDiv } from "../styles";
-import ArtPieces from "@/components/ArtPieces";
 
 const URL = "https://example-apis.vercel.app/api/art";
 const fetcher = async (url) => {
@@ -15,9 +14,6 @@ export default function App({ Component, pageProps }) {
     <>
       <GlobalStyle />
       <Component {...pageProps} pieces={pieces} />
-      <StyledDiv>
-        <h1>Best Art App Ever</h1>
-      </StyledDiv>
     </>
   );
 }
