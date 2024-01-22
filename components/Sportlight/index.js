@@ -7,7 +7,8 @@ export default function Spotlight({ image, artist }) {
   if (!image || !artist) {
     return <p>is Loading...</p>;
   }
-
+  const randomIndex = Math.floor(Math.random() * pieces.length);
+  const spotlightPiece = pieces[randomIndex];
   return (
     <div>
       <h2>Spotlight</h2>
