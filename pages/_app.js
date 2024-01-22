@@ -1,5 +1,6 @@
 import GlobalStyle from "../styles";
 import useSWR from "swr";
+import Layout from "@/components/Layout";
 import { StyledDiv } from "../styles";
 
 const URL = "https://example-apis.vercel.app/api/art";
@@ -14,6 +15,7 @@ export default function App({ Component, pageProps }) {
     <>
       <GlobalStyle />
       <Component {...pageProps} pieces={pieces} />
+      <Layout />
     </>
   );
 }
