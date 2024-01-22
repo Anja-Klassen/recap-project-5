@@ -1,5 +1,7 @@
-import ArtPieces from "/Users/anjaklassenankla/webdev/sessions/art-gallery-app/components/ArtPieces/index.js";
+import Spotlight from "@/components/Sportlight";
+import ArtPieces from "@/components/ArtPieces";
 import useSWR from "swr";
+import { StyledDiv } from "@/styles";
 
 const URL = "https://example-apis.vercel.app/api/art";
 
@@ -14,10 +16,19 @@ export default function HomePage() {
 
   if (isLoading) return <p>Is loading...</p>;
 
+  const randomIndex = Math.floor(Math.random() * pieces.length);
+  const spotlightPiece = pieces[randomIndex];
+
   return (
-    <div>
-      <h1>Hello from Next.js</h1>
+    <StyledDiv>
+      <h1>Best Art App Ever</h1>
       <ArtPieces pieces={pieces} />
-    </div>
+      <Spotlight
+        image={spotlightPiece.imageSource}
+        artist={spotlightPiece.artist}
+      />
+    </StyledDiv>
   );
 }
+
+console.log("test:", Spotlight);
