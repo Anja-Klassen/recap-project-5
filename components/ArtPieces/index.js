@@ -1,9 +1,10 @@
 import ArtPiecePreview from "../ArtPiecePreview";
+import { StyledUl } from "@/styles";
 
 export default function ArtPieces({ pieces }) {
   return (
     <>
-      <ul>
+      <StyledUl>
         {pieces.map((piece) => (
           <li key={piece.slug}>
             <ArtPiecePreview
@@ -13,7 +14,7 @@ export default function ArtPieces({ pieces }) {
             />
           </li>
         ))}
-      </ul>
+      </StyledUl>
     </>
   );
 }
